@@ -12,12 +12,17 @@ const getConfigScript = html => html.match(/<script type="text\/javascript">\s+v
 const insertConfig = (html, configScript) => {
     const $ = cheerio.load(html, {xmlMode: true});
     $('body').prepend(configScript);
-    $('script').each((index, element) => {
-        const attrSrc = $(element).attr('src');
-        if(attrSrc && (attrSrc.indexOf('/webpack') === 0 || attrSrc.indexOf('/locale.js') === 0)){
-            $(element).html(' ');
-            $(element).attr('src', redirectV4Config.index + attrSrc);
+    $('*').each((index, element) => {
+        if (element.name === 'script') {
+            const attrSrc = $(element).attr('src');
+            if (attrSrc && (attrSrc.indexOf('/webpack') === 0 || attrSrc.indexOf('/locale.js') === 0 || attrSrc.indexOf('/bundles') === 0)) {
+                $(element).attr('src', redirectV4Config.index + attrSrc);
+            }
         }
+        if (!$(element).html()) {
+            $(element).html(' ');
+        }
+
     });
     return $.html();
 };
