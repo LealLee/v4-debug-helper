@@ -36,8 +36,8 @@ npm install
 }
 ```
 - `redirectV4AppIndexUrl`里面的key是本地V4项目的启动端口
-- key对应的数组里面值是你想要debug的app的id.
-- 如果在所有的数组中都没找到当前的appid, 那么默认用`DEFULAT`对应的转发地址`http://localhost:8321` 
+- 数组里的内容是你想要debug的app的id(只需要列出自己需要debug的appId, 不需要列出所有)
+- 如果在所有的数组中都没找到当前的appid, 那么默认用`DEFULAT`对应的转发地址`http://localhost:8321` 
 
 
 2. 运行`npm start`，将会启动两个端口
