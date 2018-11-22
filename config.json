@@ -1,4 +1,31 @@
 {
-  "redirectV4AppIndexUrl": "http://localhost:8844",
+  "redirectV4AppIndexUrl": {
+    "http://localhost:8321": [
+      "DEFAULT"
+    ],
+    "http://localhost:8844": [
+      "FapiaoManager",
+      "CNPayTenantAdmin",
+      "HealthCheck",
+      "FapiaoAuthentication",
+      "CNPayServiceMonitor",
+      "InvoiceDetailsInfo",
+      "InboundInvoiceEntry",
+      "FapiaoScanAR",
+      "FapiaoScanExpense",
+      "FapiaoLookupMonitor",
+      "NotificationCenter",
+      "FapiaoReport",
+      "SupplierInvoiceEntry",
+      "FapiaoScanAP",
+      "FapiaoLookupConfig"
+    ],
+    "http://localhost:8102": [
+      "BrandhouseLogisticsManager", 
+      "PriceComparison", 
+      "ProductEnrichment", 
+      "ResellerMarketplaceManager"
+    ]
+  },
   "logRequestToConsole": false
 }
