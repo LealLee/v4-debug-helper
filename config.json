@@ -18,7 +18,8 @@
       "FapiaoReport",
       "SupplierInvoiceEntry",
       "FapiaoScanAP",
-      "FapiaoLookupConfig"
+      "FapiaoLookupConfig",
+      "ProformaManagerAP"
     ],
     "http://localhost:8102": [
       "BrandhouseLogisticsManager", 
