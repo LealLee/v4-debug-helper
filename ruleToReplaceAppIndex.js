@@ -2,7 +2,7 @@ const config = require('./config.json');
 const rp = require('request-promise');
 const cheerio = require('cheerio');
 
-const hackUrlReg = /^https:\/\/.+\.bwtsi\.cn\/v4\/apps\/\w+\.\w+$/;
+const hackUrlReg = /^https:\/\/.+(\.bwtsi\.cn|\.tradeshift\.com)\/v4\/apps\/\w+\.\w+$/;
 
 const getConfigScript = html => html.match(/<script type="text\/javascript">\s+var __config = \{.+\};\s+<\/script>/)[0];
 
