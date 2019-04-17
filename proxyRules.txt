@@ -1,0 +1,6 @@
+[SwitchyOmega Conditions]
+@with result
+
+UrlRegex: dev\.cn-northwest-1\.test\.bwtsi\.cn|sandbox\.tradeshiftchina\.cn|10.133.\d+\.\d+ +ts-middleman
+
+* +direct
